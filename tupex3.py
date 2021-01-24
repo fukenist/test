@@ -1,7 +1,7 @@
 handle = open('asya.txt',encoding="utf8")
 
 letters = dict()
-
+#look through the history of messages
 for ln in handle:
 	words = ln.split()
 	for word in words:
@@ -15,7 +15,7 @@ lst = list()
 
 for k,v in list(letters.items()):
 	lst.append((v,k))
-	
+#sort the most popular words	
 lst.sort(reverse=True)
 for k,v in lst:
 	print(k,v)	
